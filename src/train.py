@@ -121,7 +121,7 @@ def run():
         print(f'Epoch - Training loss - {epoch_train_loss} Valid loss - {epoch_valid_loss}')
 
         spear =[]
-        for jj in range(t.shape[1]):
+        for jj in range(targets.shape[1]):
             p1 = list(targets[:, jj])
             p2 = list(outputs[:, jj])
             coef, _ = np.nan_to_num(stats.spearmanr(p1, p2))

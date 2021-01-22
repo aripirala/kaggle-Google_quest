@@ -1,10 +1,11 @@
 import transformers
 import tokenizers
 import os
+import torch
 
-DEVICE = "gpu"
+DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 MAX_LEN = 512
-TRAIN_BATCH_SIZE = 16
+TRAIN_BATCH_SIZE = 8
 VALID_BATCH_SIZE = 8
 LR = 3e-5
 EPOCHS = 5

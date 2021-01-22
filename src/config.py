@@ -2,7 +2,7 @@ import transformers
 import tokenizers
 import os
 
-DEVICE = "cpu"
+DEVICE = "gpu"
 MAX_LEN = 512
 TRAIN_BATCH_SIZE = 16
 VALID_BATCH_SIZE = 8
